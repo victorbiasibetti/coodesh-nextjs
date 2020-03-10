@@ -9,7 +9,7 @@ export default () => Composed =>
     }
 
     componentDidMount() {
-      ReactGA.initialize('CODIGO_GOOGLE_ANALITCS')
+      ReactGA.initialize('UA-160165619-1')
       ReactGA.pageview(window.location.pathname)
     }
 

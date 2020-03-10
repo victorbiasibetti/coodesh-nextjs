@@ -17,7 +17,10 @@ const Posts = ({ posts }) => (
     <ul>
       {
         posts.map(post => (
-          <li key={post.id}>{post.title}</li>
+          <li key={post.id}>
+            {post.title}
+            <Link href={`/posts/${post.id}`}><a>Acessar</a></Link>  
+          </li>
           )
         )
       }
