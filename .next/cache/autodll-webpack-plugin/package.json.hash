@@ -1,0 +1,1 @@
+{"name":"Coodesh-NextJS","version":"1.0.0","main":"index.js","license":"MIT","dependencies":{"axios":"^0.19.2","cors":"^2.8.5","next":"^9.3.0","react":"^16.13.0","react-dom":"^16.13.0"},"scripts":{"dev":"next","start":"next start","build":"next build"},"readme":"ERROR: No README data found!","_id":"Coodesh-NextJS@1.0.0"}
