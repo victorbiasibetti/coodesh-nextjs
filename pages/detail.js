@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
+import Link from 'next/link'
 import withAnalytics from '../src/hocs/withAnalytics'
 
 const Detail = ({post}) => (
@@ -8,6 +9,7 @@ const Detail = ({post}) => (
     <h1>{post.title}</h1>
     <p>{post.headline}</p>
     <p>outra informação</p>
+    <Link href='/'><a>Voltar</a></Link>
   </div>
 )
 
