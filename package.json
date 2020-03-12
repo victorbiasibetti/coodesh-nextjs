@@ -4,6 +4,7 @@
   "main": "home.js",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
     "axios": "^0.19.2",
     "cors": "^2.8.5",
     "micro-cors": "^0.1.1",
@@ -11,11 +12,16 @@
     "next-routes": "^1.4.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-ga": "^2.7.0"
+    "react-ga": "^2.7.0",
+    "react-html-parser": "^2.0.2",
+    "styled-components": "^5.0.1"
   },
   "scripts": {
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
     "build": "next build"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7"
   }
 }

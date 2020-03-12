@@ -1,23 +1,33 @@
-import React from 'react'
+import React, {Component} from 'react'
 import axios from 'axios'
+import ReactHtmlParser from 'react-html-parser'; 
 
 import Link from 'next/link'
 import withAnalytics from '../src/hocs/withAnalytics'
 
-const Detail = ({post}) => (
-  <div>
-    <h1>{post.title}</h1>
-    <p>{post.headline}</p>
-    <p>outra informação</p>
-    <Link href='/'><a>Voltar</a></Link>
-  </div>
-)
 
-Detail.getInitialProps = async ({query}) => {
-  const response = await axios.get(
-    `https://mejorconsalud.com/wp-json/mc/v1/posts/${query.post}`
-  );
-  return {post: response.data}
+class Detail extends Component {
+  
+  static async getInitialProps ({query}) {
+    const response = await axios.get(
+      `https://mejorconsalud.com/wp-json/mc/v1/posts/${query.post}`
+    );
+    return {post: response.data}
+  }
+
+  render(){
+    const { post } = this.props;
+    
+    return (
+      <div>
+        <h1>Detail</h1>
+        
+        {ReactHtmlParser(post.content)}
+        
+        <Link href='/'><a>Voltar</a></Link>
+      </div>
+    )
+  }
 }
 
 export default withAnalytics()(Detail)
